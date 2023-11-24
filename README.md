@@ -19,7 +19,10 @@ As intenções que serão classficadas pelo chatbot serão: </br>
 ## Modelos de aprendizagem
 O tamanho do sobconjunto de dados definido é uma característica muito relevante para a tarefa de classificação da intenção, tendo em vista que a pequena quantidade de dados de treinamento poderá resultar em overfitting dos modelos de aprendizagem. </br>
 
-Desta forma, foram escolhidas 3 redes neurais ... 
+Para a tarefa de classificação e geração de texto beseado em processamento de linguagem natural, escolhemos modelos de RNNs para realizar uma análise comparativa dos resultados obtidos durante treinamento e teste.
+
+### Avaliação
+A base de dados sob estudo foi previamente dividida em subconjuntos de treinamento e de teste, de forma que ambas amostras nunca se misturam durante os processos de treino e teste. A avaliação da performance dos modelos sob o subcojunto de teste mede a acurácia e o F1-score dos modelos treinados anteriormente.
 
 # Referências
 
