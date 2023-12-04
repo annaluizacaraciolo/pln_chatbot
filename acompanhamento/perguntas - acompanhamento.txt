@@ -1,0 +1,21 @@
+Confirmar: A arquitetura GUS seria muito básica para o nosso projeto?
+
+Podemos usar um modelo pré-treinado?
+
+LSTM (Long short term memory) ou GRU (Gated Recurrent Unit)?
+
+
+Etapas do projeto, além da parte dos dados:
+
+PRIMEIRA PARTE (acho que entender o que a pessoa está falando)
+Classificador para classificação de domínio, intenção e extração dos campos;
+Requer dados rotulados;
+
+SEGUNDA PARTE (decidir qual ação tomar)
+Classificador multi-class para identificar a tag baseado no contexto/intenção
+Extrator para identificar os slots
+
+TERCEIRA PARTE (geração de linguagem natural)
+Deslexização de palavras que representam slots.
+Uso de encoder/decoder
+
