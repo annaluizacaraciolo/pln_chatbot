@@ -1,8 +1,13 @@
 version: "3.1"
 
 intents:
-  - ReserveOneWayFlight
-  - SearchOneWayFlight
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
 
 responses:
   utter_greet:

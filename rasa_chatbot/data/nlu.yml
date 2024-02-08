@@ -1,91 +1,21 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+  - intent: ReserveOneWayFlight
+    examples: |
+      - Yes, Can you assist me with buying the ticket.
+      - Okay, thanks for the help.
+      - Yes, please book a flight for me. My plans might change, so please purchase refundable tickets only.
+      - Yes please book the ticket.
+      - Great, thanks.
+      - Sure, go ahead and buy a ticket for me.
+  - intent: SearchOneWayFlight
+    examples: | 
+      - I need a one way flight and prefer traveling in Premium Economy class.
+      - I would like to leave next Friday.
+      - I am traveling to NYC from Seattle, WA. I prefer to travel on Delta Airlines.
+      - Is this a refundable ticket?
+      - What is the arrival airport
+      - Please find a one-way flight from Paris, France.
+      - Which airport is this flight departing from? Also, is this ticket refundable?
+      - I am traveing to San Diego.
