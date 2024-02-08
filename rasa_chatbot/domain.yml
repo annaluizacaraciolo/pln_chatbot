@@ -5,6 +5,9 @@ intents:
   - SearchOneWayFlight
 
 responses:
+  utter_searchonewayflight
+    - text: "When would you like to fly?"
+
   utter_greet:
   - text: "Hey! How are you?"
 
