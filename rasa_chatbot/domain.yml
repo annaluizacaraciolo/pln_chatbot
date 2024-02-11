@@ -3,10 +3,22 @@ version: "3.1"
 intents:
   - ReserveOneWayFlight
   - SearchOneWayFlight
+  - ReserveRoundtripFlights
+  - SearchRoundtripFlights
 
 responses:
-  utter_searchonewayflight
-    - text: "When would you like to fly?"
+  utter_searchonewayflight:
+  - text: "When would you like to fly?"
+
+  utter_searchroundtripflights:
+  - text: "Where would you like to go?"
+
+  utter_reserveonewayflight:
+  - text: "Where are you leaving from?"
+
+  utter_reserveroundtripflight:
+  - text: "Sure! Tell me when would you like to leave, from where and where to."
+
 
   utter_greet:
   - text: "Hey! How are you?"

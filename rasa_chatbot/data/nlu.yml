@@ -1,21 +1,1064 @@
-version: "3.1"
-
+version: '3.1'
 nlu:
-  - intent: ReserveOneWayFlight
+  - intent: SearchOnewayFlight
     examples: |
-      - Yes, Can you assist me with buying the ticket.
-      - Okay, thanks for the help.
-      - Yes, please book a flight for me. My plans might change, so please purchase refundable tickets only.
-      - Yes please book the ticket.
-      - Great, thanks.
-      - Sure, go ahead and buy a ticket for me.
-  - intent: SearchOneWayFlight
-    examples: | 
       - I need a one way flight and prefer traveling in Premium Economy class.
       - I would like to leave next Friday.
       - I am traveling to NYC from Seattle, WA. I prefer to travel on Delta Airlines.
       - Is this a refundable ticket?
       - What is the arrival airport
-      - Please find a one-way flight from Paris, France.
-      - Which airport is this flight departing from? Also, is this ticket refundable?
+      - Sounds good to me.
+      - Can you help me to find one way flights for my upcoming trip?
+      - I'll be going to SF.
+      - I'll be flying from Toronto, Canada on the 4th of this month.
+      - Are any other option available.
+      - Are there any other options? I need 4 tickets.
+      - Which airport does it depart from?
+      - That sounds good to me.
+      - I am going on vacation soon, can you find me a ticket?
+      - I will be leaving from Washington on the 10th of March going to CDMX. I would prefer a business or economy seat.
+      - What airport is the flight leaving from? And can I get a refund on this ticket?
+      - Okay, this sounds okay for me.
+      - Can you help me book a one way flight for a trip I have coming up?
+      - I will need 1 ticket leaving from Seattle, WA.
+      - I would like a flight to Atlanta please.
+      - I will need the flight for the 12th of this month.
+      - Do you have any other available flights?
+      - Where would I be departing from and what time will the onward flight arrive?
+      - I have a trip coming up, can you find me a oneway trip flight?
+      - I'm going to London.
+      - I leave from Atlanta, GA on the 2nd.
+      - Are there any other flights? I prefer Delta Airlines. I'm heading to NY.
+      - When does the onward flight arrive?
+      - Hey, I am looking for a one way flight on the 3rd of this month.
+      - From SD.
+      - I'm going to Portland. I would like an economy ticket.
+      - That sounds good to me.
+      - I'm looking for one way flights.
+      - Paris, France.
+      - Leaving from Seattle on the 8th.
+      - From which airport?
+      - Sounds good.
+      - I am going on vacation soon, so I need to find some one way flights. I will be leaving from Paris.
+      - I want to travel to Las Vegas. I want to leave on March 10th and don't care about the airline.
+      - Where does that flight depart from and is the ticket refundable?
+      - Is there anything else available?
+      - I need to find a one way flight.
+      - I will be flying out of Phoenix on March 8th. I would like something in Economy.
+      - Seattle and I need 1 ticket.
+      - What time does it arrive and at what airport?
+      - That flight works for me>
+      - I have a trip coming up. Are there any oneway flights from New York?
+      - There is only one person in my group. I am planning to leave on the 8th of this month.
       - I am traveing to San Diego.
+      - Which airport is this flight departing from? Also, is this ticket refundable?
+      - This flight sounds good to me.
+      - Please find a one-way flight from Paris, France.
+      - I'll be going on the 14th of March.
+      - Actually, I'll be leaving from Ciudad de Mexico, and my destination is San Diego.
+      - Great, that flight will do.
+  - intent: ReserveOnewayFlight
+    examples: |
+      - Yes, Can you assist me with buying the ticket.
+      - That is correct.
+      - That is all I needed. Thank you.
+      - Yes, please. Get me Economy class tickets.
+      - Yes, that's correct.
+      - Thank you for the help. That's all I need for now.
+      - Yes, I would..
+      - No, I need three tickets
+      - Actually, I only need 2 tickets.
+      - Yes, and when does the flight end, and at which airport?
+      - Thank you. That's everything.
+      - That's a plan. Can you help book another one way flight for another trip I want to take?
+      - Yes that would be correct.
+      - Thank you so much.
+      - That sounds good to me. I want to travel soon, can you help me buy a oneway ticket?
+      - Yes, that's right.
+      - Which airport does it leave from?
+      - What airport does it arrive at? Is it refundable?
+      - Thanks, that's all I need.
+      - Yes book it please.
+      - Sounds good.
+      - Thank you.
+      - Okay, that sounds good. I would like to leave soon, so could you help me with buying that one way ticket?
+      - Yes that is correct. What airport does that leave from?
+      - Okay, thanks for the help.
+      - Yes please book the ticket.
+      - Yes that is good.
+      - What airport will I be flying from?
+      - Thanks, that will be all.
+      - Yes, please book a flight for me. My plans might change, so please purchase refundable tickets only.
+      - Yes, this sounds good. When does the onward flight arrive?
+      - Thank you very much!
+      - Sure, go ahead and buy a ticket for me.
+      - Yeah, that's perfect.
+      - Great, thanks.
+  - intent: SearchRoundtripFlights
+    examples: |
+      - I need to find round trip flights for 3 people travelling to Washington.
+      - I'm leaving for Philly next Thursday, returning on the 11th.
+      - Can you look for round trip flights?
+      - I am departing from Seattle, WA and would like to return on the 12th of this month.
+      - I am traveling to San Diego tomorrow.
+      - Can you look up some round trip flights for me?
+      - Monday next week. I'd be leaving from Las Vegas and going to SD.
+      - The 11th of March.
+      - Can you find some round trips for me with American Airlines on the 2nd?
+      - I want to go to SF on the 8th of this month.
+      - I'll be leaving LA.
+      - That flight sounds great.
+      - I need you to find me some flights.
+      - I'm going to Portland, OR and am leaving from Phoenix.
+      - I want to leave on March 12th and return on 14th of march.
+      - Are there zero stops?
+      - When will my return flight arrive? From what airport does the flight leave?
+      - Are there any other available flights there?
+      - Can you find me round trip flights?
+      - I want to come back on 4th of March and Im leaving from ATL
+      - I want to fly to Seattle.
+      - I would like to leave on this Saturday
+      - Can you do a search for round trip flights?
+      - I'm leaving from Seattle.
+      - I'm going to Los Angeles and I'm coming back on the 12th of this month.
+      - Leaving this Saturday.
+      - Does it have zero stops? What's the arrival airport?
+      - What about the other flights? Look for three tickets. I prefer United Airlines
+      - I am looking to book a flight for Delta Airlines
+      - I am going to fly from seattle.
+      - I want to return on the 9th.
+      - I am going to Vancouver want Premium Economy on March 2nd.
+      - when does the flight arrive?
+      - Please help me find flights from Southwest Airlines. I need to be back at my hometown.
+      - I need to leave on the 5th to attend a family gathering at Seattle. I will be coming from SFO.
+      - I need to be back at work on 12th of March.
+      - Can you find me a round trip flight back on March 10th
+      - I am going to LA on March 5th
+      - I am leaving from Vancouver monday next week and i prefer Delta airlines
+      - When does the flight arrive?
+      - When does the flight arrive and how many stops ?
+      - that sounds good
+      - Can you find round trip flights for me?
+      - I am leaving on the 8th of March and want to get back on March 11th. I will be traveling to Ciudad de Mexico.
+      - I am traveling from Phoenix, Az.
+      - I have 4 people in my group, are there any other flights available?
+      - How many stops does it have?
+      - Ok, this flight sounds good to me.
+      - I am looking for round trip flights just for one person.
+      - I want to go next Monday to Chicago.
+      - I need a return fight for the 12th.
+      - I am leaving from SF.
+      - Are there any other options?
+      - Anything else available?
+      - That one sounds perfect.
+      - I would like to book a flight.
+      - Departure on the 3rd of March and return on the 10th.
+      - I'm going to Chicago.
+      - I'm leaving from Seattle.
+      - Tell me about another flight.
+      - Could you please find Economy class flights for me?
+      - I plan to leave for Chicago on the 2nd of March.
+      - I would like to return from London, UK, on March 12th.
+      - I am interested in that flight.
+      - Can you find me some round trip flights for my business conference?
+      - I'm going from CDMX to Chi-town and leaving on the 3rd.
+      - I want to get back on the 8th of March.
+      - Are there any other flights?
+      - How about any other flights? This is just for 1 person, and seating doesn't matter.
+      - What time does the return flight arrive?
+      - Could you please find round trip flights?
+      - I am moving to LA on 4th of March. It is ok with any class.
+      - I will be back on the 11th.
+      - I am moving from Chi-town.
+      - I am looking for round trip flights from Seattle leaving on Tuesday next week.
+      - I am traveling to SFO and returning on March 8th.
+      - What time does the return flight arrive?
+      - Are there any other flights available. I want to return on the 11th of March and I prefer Economy.
+      - Is this ticket refundable?
+      - Are there any other available flights? It is for one person.
+      - Could you find round trip flights for me?
+      - I will leave from LAX to Phoenix and want to return on the 14th of March.
+      - I will leave on the 11th of March.
+      - When does my return flight arive?
+      - Is anything else available? I will leave from San Diego and I don't care about the airline.
+      - Could you suggest other flights?
+      - Which airport does the flight arrive to. Could I get a refund if I needed one?
+      - That flight sounds good.
+      - I'm looking for round trip airline tickets to San Francisco. Can you help?
+      - I'd like to fly out of London on the 6th of March, returning on the 13th of this month.
+      - Can you please tell me the destination airport and the number of stops?
+      - Can you please search round trip flights for two people?
+      - I'm leaving from Portland.
+      - I am traveling to LA, leaving on March 12th and returning on the 14th of this month.
+      - When does the initial flight arrive, and does it have zero stops?
+      - Are there any other available flights?
+      - Are there others available?
+      - Can you search flights for me?
+      - I'm traveling from NY to Chi-town on the 9th of March.
+      - I want to return on March 14th and I prefer United Airlines.
+      - Which airport does the flight depart from?
+      - That flight sounds good to me.
+      - Hello. Can you help me search for round trip flights?
+      - I am traveling to Seattle, WA.
+      - I want to leave from ATL on the 1st of March, and return on the 12th of March.
+      - Are there any other options? I have three people in my group, and we prefer economy tickets.
+      - That one sounds good to me.
+      - Please look for round trip flights.
+      - I'm going to NYC. I want to leave on March 3rd and get back on the 14th of March.
+      - Leaving from Ciudad de Mexico.
+      - What else is available?
+      - I would like to book a round trip.
+      - On March 12th to Vancouver and getting back on the 14th of this month.
+      - I am leaving from Seattle, WA.
+      - That flight is good.
+      - I want a list of round trip flights.
+      - Departure is LA and arrival is Seattle to return on the 10th of this month.
+      - I want to leave today.
+      - Are there others because I need four in any class.
+      - I accept this flight.
+      - I want to look at some flights.
+      - Later today, and there are 4 people traveling with me.
+      - Leaving from SFO to Seattle. I need to return on the 14th of this month.
+      - Is there anything else available in Economy?
+      - Are there any Delta Airlines flights?
+      - Where does that flight leave from? Does it have 1 stop?
+      - Sound good.
+      - I need to go on a trip. Can you find a round-trip flight for me?
+      - I am going to Toronto, Canada. I want to leave on the 2nd and return on the 5th of March.
+      - I'll leave from New York City.
+      - What airport does this flight take me too, and which station does it leave from?
+      - Can you help me find a round trip flight through Delta Airlines?
+      - I would like a flight to LA please.
+      - I would be flying out of Atlanta on the 3rd and I would like to return on the 9th of March.
+      - Hey, I'm thinking of going on a trip. Can you search round trip flights for me?
+      - I want to leave on the 3rd and get back on 11th of this month. The destination is Atlanta, GA.
+      - From LA. I want two tickets.
+      - Are there any Delta Airlines flights?
+      - In which airport will it arrive? Does it have 0 stops or more than that?
+      - Sounds good to me.
+      - Could you help to search for round trip tickets departing from LA?
+      - I would prefer to leave on Monday next week to NY and return on the 14th.
+      - Are there any alternative flights?
+      - That sounds great!
+      - Please search flights for me.
+      - I m leaving from Vegas on the 6th of this month and coming back on the 9th of this month.
+      - I am going to SD.
+      - There is only 1 in my group. Are there any other available flights?
+      - That flight sounds good to me.
+      - Please search the flights for me with return date of 7th of this month.
+      - Please search for NYC to LAX.
+      - I am planning to leave this Saturday.
+      - what are the arrival schedules for both locations?
+      - this flight looks good.
+      - Can you search flights for me?
+      - I'm leaving from SF and traveling to Seattle, WA.
+      - I'd like to leave on the 6th of March and return March 10th; this is for 1 person.
+      - What are some of the other flights?
+      - What flights are available for a group of four?
+      - Is the ticket refundable? When does the onward flight arrive?
+      - That sounds good to me.
+      - Can you search some flights for me?
+      - I'm leaving Chi-town via economy class
+      - I plan on leaving next Thursday
+      - I want to get back on the 10th
+      - I'm going to Seattle, doesn't matter what airline
+      - Please help me find a flight?
+      - The travel will be for two people leaving from Seattle
+      - Leaving on March 3rd and going to Chicago
+      - I like United Airlines and want to come back on the 8th of March
+      - Is that ticket refundable and from what airports?
+      - Great
+      - I would like to find 1 ticket for a flight.
+      - I want to travel round trip to Atlanta, GA and get back on the 9th.
+      - I'm leaving from San Francisco on the 2nd of March.
+      - That sounds good to me.
+      - I'm thinking of traveling soon could you find me a flight?
+      - I'm leaving from San Francisco and am traveling to London, England. I plan on returning on the 6th of this month.
+      - I'm leaving tomorrow, could you find me a flight through American Airlines?
+      - Okay, when does the onward flight arrive?
+      - Does the flight only have one stop?
+      - That sounds perfect.
+      - Search flights leaving on the 8th of this month please.
+      - I'll be leaving from London on the 10th of this month. I'll be traveling to ATL.
+      - That flight will work
+      - I'm planning a vacation. Would you mind searching some flights for me?
+      - I have work back so I want to leave San Fran on the 13th
+      - I'll be traveling to Chicago and leaving on March 9th.
+      - Are there any other available flights? That time doesn't work for me.
+      - Which airport does the flight arrive at?
+      - I am traveling to Philadelphia, can you find me a flight?
+      - I am leaving form SFO on March 7th and returning 12th of this month.
+      - Which airport does the flight leave?
+      - Any other options for me?
+      - Please help me find flights.
+      - Will be leaving on March 3rd.
+      - I will visit SF and I am from Las Vegas.
+      - Plans to get back on March 14th and I would like to travel on Economy.
+      - Would you be able to find me a flight?
+      - I want to leave on March 3rd.
+      - I will be departing from Atlanta, GA, returning on the 5th, and am going to Paris.
+      - Can you find something else specifically in Economy?
+      - Can you help me search for flights?
+      - On March 10th. I'm leaving on the 6th of March.
+      - I am heading to Atlanta, GA.
+      - I'm leaving from Delhi.
+      - Which airport does the flight come? Also, is the ticket refundable?
+      - Okay, sounds good.
+      - Can you find flights for me on American Airlines? I need to be back by the 11th.
+      - I'll be flying from Chicago on the 3rd of this month.
+      - I'm going to New York.
+      - When does the return flight arrive?
+      - And when does the outbound flight arrive at the destination?
+      - That sounds good to me.
+      - I need you to look for some flights for me.
+      - I plan to leave on the 5th of March.
+      - I'm leaving from CDMX to Chicago and I'll be back on the 13th of this month.
+      - Fine, I'll take it.
+      - Can you search some premium economy flights for me?
+      - I want to leave today.
+      - I'm leaving from San Fran.
+      - I'm going to Portland. I'm coming back on Tuesday next week.
+      - Can you help me find a flight?
+      - I'd like to leave on Monday next week to LAX and get back on the 14th of this month.
+      - There's two people with me and we're leaving from Atlanta. If possible, I prefer Delta Airlines.
+      - Are tickets refundable? When does the flight arrive?
+      - That sounds great.
+      - Can you help me search for some flights?
+      - I'd like to leave next Wednesday on a flight to Phoenix, AZ and return on the 13th of this month.
+      - If possible, American Airlines since I'll be leaving from London.
+      - Are tickets refundable? And where does the flight depart from?
+      - Could you check flights for me with American Airlines?
+      - I am leaving from Philly to Chicago and I would like to return on 14th of this month.
+      - The 9th of this month and I prefer to travel Economy.
+      - Ok is the ticket refundable?
+      - At what time does my onward and return flights arrive?
+      - That all sounds good.
+      - can you search flights for me? i am travelling to los angeles
+      - i want to get back on 11th of march and wish to traveling in economy class
+      - i ama leaving from philadelphia
+      - i am leaving on march 6th
+      - that flight sounds good to me
+      - Will you search some flights for me?
+      - I'll return on the 9th. I am departing from Chicago on March 4th.
+      - I'm going to Mexico City.
+      - Is anything else available? I prefer something in Premium Economy.
+      - What time does the return flight arrive and which airport does it depart from?
+      - That flight works for me.
+      - I want you to find a flight for me.
+      - I'm going later today and leaving from San Fran. I need to be back on 4th of this month.
+      - Atlanta. I prefer economy class.
+      - What airport does that flight go to? And what airport does it leave from?
+      - Help me to find flights, please.
+      - I plan to be back on 14th of March.
+      - I will go to Los Angeles.
+      - I will be leaving from Vancouver, BC plans to travel on economy. I will be leaving on 6th of March.
+      - Are there any other flights available?
+      - Can you find a flight for me?
+      - On the 13th of March.
+      - I am departing from SD. I may change my plans, so I want refundable tickets only.
+      - Going to LA. I want Economy tickets and I am leaving on March 8th.
+      - When will my return flight arrive?
+      - Sound good to me.
+      - Can you find me some flights?
+      - I want to head to Phoenix, AZ today, and hopefully return on March 7th.
+      - From ATL airport.
+      - Is there anything else available? I want to leave from Seattle, WA.
+      - Is it refundable?
+      - Alright, that works.
+      - I'm looking for some flights.
+      - I am going to Nairobi, Kenya. I am going from Philadelphia.
+      - I want to come back on 10th of March. And, I am leaving on 5th of this month.
+      - Can you find a flight for me?
+      - New York.
+      - I am going to Chi-town, looking to return on the 11th of this month and I prefer Delta Airlines.
+      - The 1st of this month.
+      - Which airport does it depart from? Does the flight have 1 stop?
+      - That flight works for me.
+      - I'm looking for a flight, can you search for me?
+      - I would like to be back on the 9th of this month. I want to leave on the 2nd.
+      - I'm going to San Francisco.
+      - I want to fly American Airlines. I'm departing from Seattle.
+      - Is it a zero stop flight and what time does the flight arrive at the destination?
+      - Can you search flights for me? I am leaving from the LAX.
+      - I am traveling to Portland, OR. There are two people in my group.
+      - I want to get back on the 8th. I am leaving on March 4th.
+      - The flight sounds good to me.
+      - Will you please help me find flights?
+      - On the 8th.
+      - I'm leaving from SD on the 1st and want to travel to Sydney, NSW.
+      - What time does the return flight arrive?
+      - Please let me know if this flight has zero stops and when does the onward flight arrive?
+      - Awesome, thanks.
+      - I need airline tickets.
+      - I'm planning on leaving the 2nd of this month from Seattle, Wa and returning the 11th of March.
+      - Phoenix, AZ, Economy class.
+      - That's perfect.
+      - I need to fly from LAX, please find a flight
+      - I'm going to Philadelphia and need to be back on the 13th of March
+      - I want to return on the 6th of this month, and I am leaving on the 2nd of March. There will be 3 of us in total.
+      - When does the onward flight get in, and to which airport?
+      - I would like to travel to Phoenix, AZ. Would you search available flights for me?
+      - I will fly out from Ciudad de Mexico.
+      - I am leaving on the 3rd.
+      - I would like to leave San Fran and be home next Friday.
+      - Where does the flight leave from?
+      - Can you search for a flight for me?
+      - Friday next week I want to fly from SF to Los Angeles.
+      - March 11th please.
+      - Sounds good to me.
+      - I want to go to London, England. Can you find me a flight?
+      - March 14th will be my due date.
+      - I want to leave on March 5th out of Philadelphia.
+      - Can you find something else?
+      - Can you find something else for three people?
+      - i am looking for Economy class flights?
+      - I am traveling to Portland.
+      - I am leaving on the 7th and returning of 10th of this month.
+      - i am leaving from Vancouver, BC and would prefer United Airlines.
+      - When will my return flight arrives?
+      - Please find me a flight.
+      - I need a flight to San Francisco. I need to depart on Monday next week and return on March 11th.
+      - I need a flight for 1 person departing from LAX.
+      - Can you run a search for flights?
+      - I am planning on traveling to SFO, and I will be leaving from Delhi, India on March 4th.
+      - I plan on returning on the 6th.
+      - When will the return flight arrive?
+      - That flight sounds perfect for me.
+      - I have 4 people in my group and need a flight, can you do a search?
+      - I am wanting to visit Chi-town.
+      - I want to go on the 6th.
+      - I am leaving from ATL and want to return on the 14th of March.
+      - Are their any other options? I would prefer to fly Delta Airlines on either business or economy.
+      - That is great.
+      - I would like to book a flight.
+      - I'm traveling to SFO on the 13th of March from Seattle.
+      - I would like to leave the 2nd of this month.
+      - Are they any other flights available?
+      - That flight is good.
+      - I need to take a flight soon. Can you help me find tickets? I usually travel Economy class.
+      - I'll be departing from Los Angeles, and I want to be home on the 13th.
+      - I'll be going to Vancouver on business. I actually need to leave later today. Can you find me something?
+      - Is that refundable if I change my mind on the return flight? Also, how many stops does the flight have?
+      - Could you search for flights for me?
+      - I'm travelling to Chicago, I would like to come back on the 13th of this month.
+      - I'm planning to leave tuesday next week.
+      - I'm leaving from Washington
+      - That would be great.
+      - Can you look for a flight for me to ATL?
+      - I am traveling from San Francisco. Please search flight leaving on Monday next week and return on 13th of March. There are only 1 people in my group
+      - I like to travel in Economy, any other available flights?
+      - How many stops are there?
+      - Can i refund the ticket if i cancel?
+      - I will be taking a trip Monday next week. Can you find a flight for me?
+      - I am leaving from Seattle and going to SF. I would prefer to use Delta Airlines.
+      - I would like to return on March 7th.
+      - Are there any stops on the flight? When does the flight from Seattle arrive in SF?
+      - Sounds good.
+      - Can you search airline flights for me?
+      - I want to go to Seattle, WA on the 8th, and be back by the 11th of March. Preferably with United Airlines.
+      - I'll be leaving from San Fran with two people. Can we get an Economy flight?
+      - I'd like a flight leaving on the 7th and coming back the 12th of this month.
+      - I'm going to Paris from San Fran. There is one person.
+      - At what time does the onward flight arrive?
+      - I think that will work.
+      - Can you search for flights for me?
+      - I'm traveling to San Fran from Seattle, WA with 1 person. I want to get back on the 13th.
+      - On the 3rd of March.
+      - Please help me search flights.
+      - I'm leaving from Philadelphia on March 2nd, and returning from my trip to Nairobi on the 8th of March.
+      - I need to know when the onward flight arrives and which airport it arrives at.
+      - That will work for me!
+      - Can you look for some flights for me?
+      - The destination is Las Vegas. I will be leaving on the 5th and want to be back on March 9th. I will be leaving from San Francisco.
+      - It sounds good to me.
+      - Can you look flights for me? I am taking off on this Sunday.
+      - I am taking off from Seattle, WA.
+      - I am traveling to SFO. I need to urge back on the 12th.
+      - Are there any other accessible flights? There are 3 individuals in my gather
+      - That flight sounds great to me.
+      - Can you help me find flights ?
+      - I am traveling from ATL to London, England on 5th of March in Economy. I'd like to return on the 10th of this month.
+      - Can you search for flights?
+      - I'm leaving this Saturday to go to Seattle, WA. I want to fly back on the 7th of March.
+      - I'm leaving from Mexico City.
+      - When and where does the onward flight arrive?
+      - That flight sounds good.
+      - Could you search all available flights?
+      - I need to go to SFO on next Friday. I will be leaving from Phoenix
+      - I like to leave on 2nd of March. I need Economy class for 2 people
+      - Is there any other flights available?
+      - Can you find a flight for two people for me?
+      - I'm departing from New York City and traveling to Vancouver, BC. I'd like to return on the 10th.
+      - I'll be departing on the 8th.
+      - What is the name of the departure airport, and at what time does the onward flight arrive?
+      - That flight sounds like a good option to me.
+      - I have to take a business trip, can you search flights for me?
+      - I'll be flying into LAX.
+      - I'm leaving from NY on the 7th of this month.
+      - I'd like to get back on the 14th. I prefer American Airlines in Economy class.
+      - That sounds good to me.
+      - Can you find flights for me?
+      - I want to go for NY.
+      - I will be returning back on March 11th. I want to depart on March 9th.
+      - I want to go in American Airlines from Washington.
+      - This flight is good for me.
+      - I need a flight please.
+      - I want to travel to New Delhi from ATl on March 4th.
+      - I want to return on the 9th of this month.
+      - is this a refundable ticket?
+      - Can you look for flights for one?
+      - I would like to go to CDMX and am going on the 10th of this month.
+      - I would like to come back March 12th and am leaving from SF. I would like to travel Economy.
+      - I need help finding flights.
+      - I am leaving from San Fran going to Phoenix. I will be leaving the 7th of March and returning on March 12th.
+      - What time does the onward flight land? and is that ticket refundable?
+      - What else do you have?
+      - I would like to leave Friday next week. What else do you have?
+      - I need a flight for Saturday this week.
+      - I'm leaving from London, traveling to Atlanta, and I want to return on March 12th.
+      - I am the only one traveling, are there any other flights?
+      - What airport does it leave from? Are there zero stops?
+      - I'm leaving today - are there any other flights available?
+      - I need a flight leaving on the 2nd.
+      - I am flying out of Atlanta, GA.
+      - I will be flying to London and I need to come back on the 12th of this month.
+      - Is the ticket refundable?
+      - Can you search for some United Airlines flights for me?
+      - I'm leaving from Seattle and traveling to Portland, OR.
+      - I'm leaving on March 7th, and want to come back on March 11th.
+      - Which airport is the flight leaving from?
+      - That sounds like a good flight.
+      - Please find me a flight to book.
+      - I would like to travel to LAX from the 5th to the 8th.
+      - I am flying from Portland, OR.
+      - Could you look up some flights for me?
+      - I'll need two tickets for the 6th of March.
+      - I want to use Delta Airlines and I'll be leaving from Chi-town. I want to come back on the 10th of March.
+      - I will be visiting NY.
+      - Could you find a flight for me? I need to go to Seattle, WA.
+      - I'm departing from SF on the 2nd. I want my return ticket for the 9th.
+      - Could you find another flight?
+      - Could you find another flight?
+      - If I regret the purchase, can I refund the ticket?
+      - Ok, the last flight you offered works for me.
+      - Could you look for flights for this sunday, please?
+      - I will be leaving from New York and I'll fly to Vancouver. I'll come back on the 5th, and I'd like to travel in economy
+      - that's perfect
+      - Could you search a flight for me? I'm leaving thursday next week.
+      - I would like to come back on the 10th of march.
+      - I'm going to phoenix, AZ and i'm leaving from chicago.
+      - Which airport will it arrive at? Is the ticket refundable?
+      - That flight sounds good to me.
+      - Can you look for American Airlines flights for me please?
+      - I will leave from LA, and going to Mexico City.
+      - I would like to leave on the 5th and would like to return on March 8th in Economy.
+      - Please search me some flights.
+      - Leaving from Los Angeles on 9th of this month and i would prefer American Airlines
+      - Traveling to washington and back on march 11th
+      - When does the return flight land?
+      - That is good
+      - Can you find Economy flights for me?
+      - Departing San Francisco on the 2nd of March. Returning on March 13th.
+      - To Phoenix
+      - I need to find a flight.
+      - Leaving on the 2nd of March going to Phoenix, AZ and returning on the 12th of March. I'd like something on United Airlines and it's for three people.
+      - That will be from Portland.
+      - Which airport does it fly into and does it have zero stops?
+      - Can you search flights for me?
+      - I am leaving on the 4th of March from Atlanta, GA. I want to travel Economy and I want to return on the 12th of this month.
+      - I am going to LA.
+      - Are there other flights available?
+      - Are there any other options? There are two people in my group.
+      - Where does it depart from and how many stops are there?
+      - Can you find some flights for me that leave from London, England. I would prefer American Airlines
+      - I would like to get back on March 12th.
+      - I am going to SF with 4 other people. I would like to leave on the 4th.
+      - Can you find a flight for me? I am leaving from Chi-town.
+      - I am traveling to SF on the 5th of this month. I want to return on the 8th.
+      - When does my return flight arrive and how many stops does it have?
+      - I need to find a flight for one person please.
+      - I want to fly from Las Vegas to LA on March 3rd. I would like a fight on American Airlines if possible.
+      - I want to retun on March 9th and would like a flight on United Airlines.
+      - Yes, that flight works for me.
+      - I'd like to book a flight for 4 people.
+      - I want to leave from Ciudad de Mexico and go to New York City. I'd like to leave on the 2nd and get back on the 14th of March.
+      - That flight sounds good to me.
+      - Can you search for a flight for four people?
+      - I would like to go to San Fran. I want to depart from Portland on the 1st and return on the 10th.
+      - Which airport does the flight arrive at?
+      - What are the arrival times for the departing and return flights?
+      - Can you search for flights leaving on the 2nd.
+      - I will be coming back on March 11th.
+      - I am leaving from LAX and going to Philadelphia.
+      - Sounds good to me.
+      - Can you please search flights for me? I am leaving from Chicago.
+      - I want to return on the 10th and leave on the 4th of March.
+      - I am traveling to Seattle, WA and prefer to use Southwest Airlines. There will be three people in my group.
+      - What airport does the it fly into, and is the ticket refundable?
+      - That flight sounds good.
+      - I would like to book a flight for my vacation.
+      - I would like to leave tomorrow and come back on March 9th.
+      - I am departing from Seattle, WA and going to New York.
+      - Are they any other flights available?
+      - I'd like to search for some flights, please.
+      - I'm going to San Francisco from Phoenix. I need a flight for 2 people on March 12th.
+      - I'm going to leave on the 8th of March.
+      - Can you find flights for me leaving Chi-town?
+      - I want to arrive back on the 14th of March.
+      - I am the one and only person in my group and I am going to Seattle on the 1st.
+      - I really like American Airlines, could you search for some flights for me leaving from Vegas?
+      - I would like to leave on March 5th and return on March 12th.
+      - I would like to travel in Economy and will be visiting San Fran.
+      - From which airport does the flight depart and when does the return flight arrive?
+      - That flight is perfect.
+      - I am interested in going on holiday can you help me with flights?
+      - i am thinking SF and back on the 12th.
+      - I would like to leave tomorrow from Atlanta.
+      - When does the onward flight arrive?
+      - That sounds perfect.
+      - Could you find me round trip flights?
+      - I will travel to ATL.
+      - I want to leave on the 4th and return on March 12th on Delta Airlines economy. I will be leaving from Los Angeles.
+      - What airport does it leave out depart from and arrive at?
+      - That sounds perfect.
+      - I need a flight for 1 people in my group.
+      - From Seattle, WA. On March 4th
+      - To chi-town on 9th of this month in economy
+      - When do the two flights arrive?
+      - Wow. I like it.
+      - I want you to scan for round trip flights.
+      - I want to leave on the 4th of this month and return on the 13th of this month. I would be departing from Atlanta and going to Los Angeles.
+      - Is there any other flight available?
+      - I think I like this flight. That will be all.
+  - intent: ReserveRoundtripFlights
+    examples: |
+      - That's great. I'm only going on a short trip. Can you book the tickets on my behalf?
+      - That's great.
+      - Thanks for your help. That's all.
+      - That sounds great. I'm planning a short trip, can you help me buy the tickets?
+      - There will be 1 person in my group and I prefer Premium Economy.
+      - Yes, sounds great. Can you tell me if the ticket is refundable and if it has 1 stop?
+      - Thank you for all your help, that will be all I need.
+      - That sounds good, can you book the tickets?
+      - Perfect. What time does my return flight arrive. Also, is the ticket refundable?
+      - Thanks. That's all I need.
+      - That sounds great. I want to go on a short trip. Can you help me get tickets?
+      - Yes, that sounds great.
+      - Thanks for everything.
+      - Thats great for me. Im planning to go for a short trip. Can you help me to get the flight tickets?
+      - Yes thats great for me. Which airport does the it depart from and when does the return flight arrive?
+      - Thanks a lot for it
+      - Sounds good, can you buy the tickets?
+      - No, buy Premium Economy.
+      - Yup, sounds good.
+      - Thanks, that's great.
+      - That flight sounds great can you help me book the tickets. I am planning a short trip.
+      - that sounds great
+      - thank you for helping me
+      - Oh nice. But I just want to go on a short trip. Can help be buy my tickets?
+      - Yes, everything is right.
+      - Thank you very much, you're really a big help!
+      - yes please
+      - yes please and what airport does it depart from and is ticket refundable?
+      - Thanks
+      - Yes, I want to book the tickets.
+      - Yes, that sounds good. What airport will the flight be landing?
+      - Thanks for your help.
+      - Yes please travelling Economy.
+      - That's correct. Which airports do I depart from and what is my arrival time ?
+      - Thanks for everything.
+      - Yes, you can book ticket.
+      - Yes, that sounds good
+      - is the ticket refundable?
+      - thank you that is all.
+      - Yes, please book the ticket.
+      - Yes,that sounds perfect. What is the arrival time for my return flight?
+      - Thank you, you've been very helpful. That will be all.
+      - Sounds good to me, since it's just a short trip. Can you help me buy the tickets?
+      - That sounds good. What time does the plan arrive in Chicago? Is the ticket refundable?
+      - Thanks for your help, that's all I needed.
+      - It is a good choice for me. could you book tickets for me?
+      - Nope. Kindly book it for 2 persons.
+      - It is good. Whether the flight has 0 stops?
+      - From which airport the flight starts?
+      - Thank you so much for your help.
+      - That flight works for me, can you help me purchase the ticket?
+      - Yes, that is correct.
+      - Thank you, that is all I needed.
+      - Yes, please book the ticket for one person.
+      - No, there are actually 3 people in my group.
+      - Yes, that sounds good. Could you tell me when the outbound flight arrives?
+      - Thank you for helping. That is all I wanted.
+      - This sounds perfect. Can you help me get tickets?
+      - Yes, that's perfect.
+      - Thanks so much for everything!
+      - That sounds good. Can you please reserve the tickets?
+      - That is correct.
+      - When does my return flight arrive?
+      - Thank you for all your help, that is all I need.
+      - Yes, please.
+      - Yes, that sounds good.
+      - Thanks for your help. That's all I need.
+      - Yes, please book the tickets.
+      - Yes, that's it.
+      - Is that ticket class refundable?
+      - What time does the outbound flight arrive in Seattle?
+      - Thanks for your help.
+      - Yes, that sounds good, I need four tickets.
+      - Yes, that's right. Is this refundable? Also, when does the onward flight arrive?
+      - Thanks for the assistance.
+      - Yes, book the ticket for Economy class.
+      - Yes, that is good. What time does the flight arrive and which airport?
+      - Thank you for your help.
+      - Sounds great. I'll only be gone a little while. Can you reserve tickets for 3 people?
+      - Everything sounds perfect.
+      - Thanks a lot.
+      - That's sounds perfect for my short trip. Can you reserve the ticket for 1?
+      - I am sorry can you see what is available with Premium Economy?
+      - I would like to book that one please.
+      - I am sorry, can you please let me know the return flight arrival time, and is this ticket refundable?
+      - Thank you for all of your help, that will be all for today.
+      - Yes, in Economy, please.
+      - Yes, that's exactly it.
+      - Thanks for the help.
+      - Yes, that will be great.
+      - That sounds great! What time does the onward flight, and is this ticket refundable?
+      - Thank you very much! That's all the help I need.
+      - Yes I would like to book the flights. Because my plans may change make sure to book only refundable tickets. Either business or economy is fine.
+      - That sounds good.
+      - Thanks. That's all I need.
+      - Yes, book either business or economy tickets for this flight
+      - i think its fine.
+      - Thank you for your assistance.
+      - Yes, I'd like to book the tickets.
+      - Yes, that sounds good.
+      - That's all I need, thanks.
+      - That sounds good, can you buy tickets for a short trip for 3 people
+      - Yes that sounds right
+      - What time does the departing flight arrive, as well as the return flight?
+      - Thanks for your help
+      - Yes please and book it in Economy
+      - Perfect
+      - Perfect, that's all I need
+      - Yes, please book a ticket.
+      - Yes that's correct.
+      - Thank you for your help.
+      - Yes, please book the flight.
+      - Yes thats right. When would my return flight arrive?
+      - Thanks for helping me
+      - That sounds good. Could you help me buy the tickets?
+      - Sounds good.
+      - Thanks for your help.
+      - That sounds good, the plan is small trip. Please buy me the tickets
+      - Yes thats correct
+      - Thanks for the help
+      - That sounds good but I am planning to go on a short trip. Can you help me book the flight?
+      - No, there's just 1 person.
+      - No, I mean please book flights for 2 persons.
+      - Yes, that right!
+      - When does we arrive upon departing?
+      - Alright, thank you!
+      - That is good. Can you buy me tickets?
+      - That is great.
+      - Thanks. That is all.
+      - Yes, please. Get me Economy class ticket.
+      - That's right. How many stops does the flight have?
+      - At which airport does the flight arrive? Is the ticket refundable?
+      - Thank you. That's all I need for now.
+      - Yes, please.
+      - Perfect.
+      - Thank you.
+      - That sounds good.
+      - Yes, that's correct.
+      - When and where does the flight arrive?
+      - Thanks a lot.
+      - That sounds great, this will be a short trip. Can you buy tickets for the flight?
+      - Incorrect. There will be 3 people with me total.
+      - Yes, that is correct. Where does the flight arrive?
+      - When do the returning and onward flights arrive?
+      - Excellent. Thank you so much for all of your help.
+      - Yes please.
+      - Yes that is all corrct. Which airport do I arrive at and does the flight have any stops.
+      - That is everything thank you.
+      - yes i would like to book the ticket
+      - yes that sounds good.which airport does the flight arrive?
+      - thanks for your help
+      - Yes, please. I want to reserve the ticket, and I have 2 people in my group.
+      - That's right. What time does the outgoing flight arrive? And are there 0 stops on the flight?
+      - Great, thanks very much. That will be all.
+      - Perfect. Can you buy the ticket for this trip?
+      - Sounds great. Is is refundable? And when do I arrive in Atlanta?
+      - Thanks.
+      - That sounds good, can you help me buy the ticket?
+      - No, please book for two persons.
+      - Yes, that's right.
+      - Thank you!
+      - Yes, please book 4 tickets.
+      - That works.
+      - Thank you for your help.
+      - Yes please.
+      - Yep. that's good. When do the return and onward flights arrive?
+      - Thanks for the help. That's all for now.
+      - That sounds perfect to me. Can you buy flight tickets?
+      - Yes that is perfect.
+      - Thanks for your assistance.
+      - Yes, please do. I prefer Economy.
+      - Yes, that works. Is the ticket refundable?
+      - Thanks. That's all I needed.
+      - That will work. Can you assist me in purchasing an Economy ticket?
+      - Yes everything is right.
+      - Thank you very much
+      - Yes I would like to book the ticket.
+      - Yes that sounds good. Which airport does the flight depart from?
+      - Thanks for your help.
+      - Yes, please.
+      - Perfect, thanks.
+      - Wonderful, thanks for your help. That's all for now.
+      - I need airline tickets for three.
+      - That's perfect.
+      - You are the best help.
+      - That's good, can you help me buy tickets?
+      - When does my return arrive and from which airport am I leaving?
+      - Thank you
+      - I plan to be there for a short time and that flight sounds very good. Will you help me buy tickets?
+      - Everything sounds good; when does the flight arrive in San Francisco?
+      - Thank you for your help.
+      - Yes please book it.
+      - No, I want Premium Economy.
+      - Yes, good. What time do I arrive in Los Angeles and at which airport?
+      - Thanks, that's all I needed.
+      - That sounds great. Can you find me Economy tickets for my short trip?
+      - Yes, that is right. What airport does the return flight depart from?
+      - Thanks a lot.
+      - that's great for me. I am planning to go for a short trio. Can you please help me to book the flight tickets for four people in my group?
+      - yes. That's great. From where the flight is departing? Is the ticket refundable?
+      - Thank you so much. This is what i need
+      - That flight matches my needs, I would like to book the tickets. Business or economy class is fine.
+      - The details are correct. At what time does the return flight arrive?
+      - Thank you.
+      - Yes, please book me the ticket.
+      - Everything sounds correct, thank you.
+      - Thanks for all your help.
+      - I want to plan a short trip can you assist me in buying an airline ticket?
+      - That is great but is the ticket refundable and when does the onward flight arrive?
+      - Thank you, all done.
+      - Yes, please book a ticket for Economy class.
+      - Yes that sounds good to me.
+      - Thank you for your assistance.
+      - That's okay. This flight sounds okay, and it's just a short shift anyway. Can you help me buy the tickets. There will be 3 people in my group, including myself.
+      - Yeah, that sounds good. Can you tell me the names of the departing and arrival airports?
+      - Great! Thanks for your help!
+      - Yes please.
+      - No, i need Three seats
+      - Yes that sounds good.
+      - Thank you, that is all.
+      - Ok thats fine, please book the ticket for me.
+      - Yes that sounds great.
+      - Thank you
+      - Yes, go ahead and book the flight.
+      - Yes, that sounds good. Which airport in San Francisco? Is the ticket refundable?
+      - Thanks for your help.
+      - That flight sounds good to me. I plan to go on a short trip. Can you help me buy flight tickets?
+      - Yes that sounds good. When does the onward flight arrive?
+      - Thanks for your help
+      - That flight sounds good, I'm only going on a short trip. Can you help me buy an economy ticket?
+      - Yes that sounds good.
+      - Is the ticket refundable? And when does my return flight arrive?
+      - Ok, thanks for your help.
+      - Yes, go ahead and book the tickets.
+      - No, actually there will be 2 of us flying.
+      - That's right.
+      - Thanks so much for your help.
+      - Yes please book the tickets for me.
+      - NO. There are one people in my group.
+      - Yes that is perfect.
+      - Does the flight has one stop?
+      - Thanks for your help. That will be all.
+      - Yes I would like to book the ticket.
+      - Yes that sounds great.
+      - Much appreciated for your offer assistance. That's all I require.
+      - That sounds good. Can you help me buy tickets? I am going on a short trip.
+      - Yes, that sounds great. How many stops does the flight have and which airport is it arriving in?
+      - Thanks, that's all I need.
+      - That is good choice for me. Please book a ticket on that flight.
+      - That's right. is it refundable? tell me the arrival time as well
+      - Thank you
+      - Yes, I would like to purchase that ticket as I enjoy traveling in Economy class.
+      - Yes, that sounds great.
+      - Thank you for your help.
+      - Yes, please book the ticket.
+      - Yes that sounds good.
+      - Thank you, that's all I need.
+      - Yes. I need tickets for this.
+      - Do you know which airport the return flight arrives? Do you know the time of arrival?
+      - Thank you very much.
+      - The flight times are good. Can you purchases tickets for three people?
+      - Yes that is correct! What are the arrival times for my flights?
+      - Thank you!
+      - The flight works for me. I'd like to do a short trip. Can you help me buy tickets for the flight?
+      - That is good. Which airport is the flight leaving from?
+      - Can the ticket be refunded? When is the return flight arriving?
+      - Thank you for your help. That's all I want.
+      - That works, this is for a short trip. Are you able to book that for me?
+      - Yes, that is it.
+      - Thanks for the assistance.
+      - That sounds good. It's a short trip, can you help me get the tickets?
+      - That sounds good - is it refundable?
+      - When do both flights arrive?
+      - Thanks for your help, that's all I need.
+      - Ok that sounds good. Can you but the tickets for me?
+      - Yep that sounds good. What airport will I be flying into and what time will it arrive?
+      - Thanks for your help.
+      - Go ahead and book them.
+      - Sounds good to me.
+      - Thank you so much.
+      - That works for me. Please purchase tickets for 3 people.
+      - Yes, the details are correct.
+      - Which airport am I flying into? Can I refund the tickets?
+      - Thank you, that's all.
+      - Sounds alright with me. Can you help me buy flight tickets since I'm planning on making it a short trip?
+      - It's good with me. When does the onward flight arrive?
+      - Thanks for helping me. That will be all.
+      - Yes, I would like to book the ticket in Economy class.
+      - Yes, I confirm that. When and where does the onward flight arrive?
+      - Ok, thanks for everything.
+      - yes, please
+      - yes, that's it. At what time does the departure flight arrive?
+      - thanks for your help
+      - Yes, i would like to book these.
+      - That sounds good.
+      - Thank you.
+      - It will be a short trip so that flight sounds good for one person. May I book that flight?
+      - No, there will be 3 people all together.
+      - Yes, please tell me which airport will be our destination?
+      - Can you tell me if the tickets are refundable?
+      - Thank you, that's all the help I need.
+      - Yes please make it economy for 1
+      - That is good
+      - Thanks for the help
+      - That sounds good. Can you help me buy the tickets?
+      - No. I need 4 tickets.
+      - Yes. That's good
+      - Thank you. That's all I need
+      - That sounds good for my short trip. May I book tickets with you?
+      - Where does it fly out of and is the ticket refundable?
+      - Thank you for helping me today.
+      - OK that sounds good. Can you buy the tickets for me?
+      - Yes, correct.
+      - Thanks for your help.
+      - This sounds good. It'll be a short trip so I'd like it to be Economy class. Can you help with purchasing tickets for the flight?
+      - Yeah, that sounds great
+      - Thank you very much. That will be all.
+      - That flight sounds good to me. I am planning for a short trip. Can you help me buy tickets?
+      - Yes that sounds good. Which airport does the flight depart from? Will the ticket be refundable?
+      - Thank you for the help.
+      - Yes, please reserve the ticket.
+      - Yes, I that is correct. Is this a refundable ticket? Also, what is the arrival time of the onward flight?
+      - Thanks, I appreciate it.
+      - I'd like to buy tickets for this flight.
+      - That sounds good.
+      - Thanks for your help.
+      - Sounds good to me. I am planning for a short trip. Can you help me book the tickets?
+      - Yes, that sounds correct.
+      - Thank you.
+      - Yes, please buy the tickets.
+      - That is good.
+      - Thanks for your help.
+      - Yes, please book that flight.
+      - Yes, that sounds great. What airport does the flight depart from?
+      - Thank you. That's all I need.
+      - That flight sounds good. Can you buy the tickets?
+      - Yes that is good.
+      - Thank you for your help.
+      - That sounds good to me, especially if I can travel Economy.
+      - Perfect. When is the return flight arriving?
+      - Can I get this refunded if I need to?
+      - Okay, thanks.
+      - Okay, that works for me, can I purchase it?
+      - Yes, that is correct.
+      - Thanks.
+      - Yes, please book the ticket.
+      - That is perfect.
+      - Your assistance is appreciated.
+      - Yes please.
+      - Yes that is all correct.
+      - Which airport will I arrive at?
+      - That is everything thank you for your help.
+  - intent: NONE
+    examples: |
+      - No, that will be okay. Thank you.
+      - No I just wanted the information. thank you.
+      - No that's all thanks.
+      - No thanks, that's all.
+      - No, thank you!
+      - Nope, we're good. Thanks a lot for the help!
+      - No, I just needed the information. Thanks!
+      - No Thats all for now. Thanks
+      - Nope, thanks again.
+      - No that is everything thank you for your help.
+      - No,that would be all. Thank you!
+      - no thats it
+      - No thanks. that will be all.
+      - No thank you.
+      - Nope. Thank you very much for your help.
+      - No, that will be all.
+      - No, that's it. Thanks for your help.
+      - Nope, that's it.
+      - No I do not want yet.
+      - No that is all.
+      - No thank you.
+      - No, that's all thank you.
+      - No, that's all.
+      - No, that was all.
+      - No, this should be enough for now.
+      - No that's all thanks
+      - No thanks. That's all I needed to know.
+      - No, that is all.
+      - No that's all
+      - No, I'm all good.
+      - No, I'm good for now. Maybe another time.
+      - No thank you.
+      - No, that's it.
+      - No, thank you. That'll be all.
+      - no thanks for your help
+      - No, thank you!
+      - No, thanks.
+      - No, that's it.
+      - Nope, thanks again.
+      - No. Thanks for your help.
+      - No but thanks.
+      - No thanks.
+      - No, that is all. Thanks.
+      - I do not, thank you.
+      - No, I am good for now.
+      - that is all, thank you.
+      - No, not right now. Thanks again!
+      - No, thank you.
+      - No. Thanks for the help.
+      - Not right now.
+      - Not right now.
+      - No, thanks for your help.
+      - No, that's all. Thanks again.
+      - No, I'm good.
+      - Nope, thanks for your help.
+      - Nothing else. Thanks
+      - No, but thank you for your help.
+      - No thanks!
+      - No, I'm all set, thanks.
+      - No, that will be all.
+      - No thank you.
+      - No, that's all. Thanks for your help
+      - No thank you.
+      - No, thank you
+      - No. Thanks for your help.
+      - That's all, thanks.
+      - No, thanks for your help.
+      - No, thank you.
+      - No.Thanks for your help.
+      - No, that is all.
+      - Nope, I'm good.
+      - No thanks.
+      - That will be all.
+      - No, that is all right.
+      - No, thanks for your help though.
+      - Thats it. Thanks.

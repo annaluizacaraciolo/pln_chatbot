@@ -2,10 +2,25 @@ version: "3.1"
 
 stories:
 
-- story: search tickets
+- story: search one way tickets
   steps: 
-  - intent: SearchOneWayFlight
+  - intent: SearchOnewayFlight
   - action: utter_searchonewayflight
+
+- story: search round trip tickets
+  steps:
+  - intent: SearchRoundtripFlights
+  - action: utter_searchroundtripflights
+
+- story: reserve one way tickets
+  steps:
+  - intent: ReserveOnewayFlight
+  - action: utter_reserveonewayflight
+
+- story: reserve round trip tickets
+  steps:
+  - intent: ReserveRoundtripFlights
+  - action: utter_reserveroundtripflight
 
 - story: happy path
   steps:
