@@ -37,4 +37,6 @@ Rastogi, Abhinav, Xiaoxue, Zang, Srinivas, Sunkara, Raghav, Gupta, Pranav, Khait
 [2] 
 Lee, Harrison, Raghav, Gupta, Abhinav, Rastogi, Yuan, Cao, Bin, Zhang, Yonghui, Wu. "SGD-X: A Benchmark for Robust Generalization in Schema-Guided Dialogue Systems." Proceedings of the AAAI Conference on Artificial Intelligence. 2022.
 
+[3] [Rasa nlu in depth](https://rasa.com/blog/rasa-nlu-in-depth-part-1-intent-classification/)
+
 
