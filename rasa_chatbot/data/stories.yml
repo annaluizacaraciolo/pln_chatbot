@@ -1,52 +1,55 @@
 version: "3.1"
 
 stories:
+  - story: Search and Reserve Flights
+    steps: 
+    - intent: greet
+    - action: utter_greet
+    - intent: SearchOnewayFlight
+    - action: utter_SearchOnewayFlight
+    - intent: ReserveOnewayFlight
+    - action: utter_ReserveOnewayFlight
 
-- story: search one way tickets
-  steps: 
-  - intent: SearchOnewayFlight
-  - action: utter_SearchOnewayFlight
+  - story: Search Round-trip Flights with Details
+    steps:
+    - intent: SearchRoundtripFlights
+    - action: utter_ask_departure_place
+    - intent: ask_arrival_place
+    - action: utter_ask_arrival_place
+    - intent: AskDates
+    - action: utter_ask_dates
+    - intent: tell_number_of_passengers
+    - action: utter_tell_number_of_passengers
+    #- action: action_confirm_flight_details
 
-- story: search round trip tickets
-  steps:
-  - intent: SearchRoundtripFlights
-  - action: utter_SearchRoundtripFlights/ask_arrival_place
-  - intent: SearchRoundtripFlights
-  - action: utter_SearchRoundtripFlights/ask_dates
+  - story: Reserve Round-trip Tickets
+    steps:
+    - intent: ReserveRoundtripFlights
+    - action: utter_ReserveRoundtripFlights
 
-- story: reserve one way tickets
-  steps:
-  - intent: ReserveOnewayFlight
-  - action: utter_ReserveOnewayFlight
+  - story: happy path
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_great
+    - action: utter_happy
 
-- story: reserve round trip tickets
-  steps:
-  - intent: ReserveRoundtripFlights
-  - action: utter_ReserveRoundtripFlights
+  - story: sad path 1
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: affirm
+    - action: utter_happy
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+  - story: sad path 2
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - action: utter_did_that_help
+    - intent: deny
+    - action: utter_goodbye
