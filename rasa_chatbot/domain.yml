@@ -7,7 +7,8 @@ intents:
   - SearchRoundtripFlights
   - None
   - greet
-  - faq
+  - faq/airlines
+  - faq/longest_flight
 
 responses:
   utter_ReserveOnewayFlight:
@@ -24,9 +25,6 @@ responses:
 
   utter_ReserveRoundtripFlights:
   - text: "Sure! Tell me when would you like to leave, from where and where to."
-
-  utter_faq/longest_flight:
-  - text: The current longest commerical flight is from Singapore to Newark.
 
   utter_greet:
   - text: "Hey! How are you?"
@@ -47,6 +45,12 @@ responses:
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
 
+  utter_faq/longest_flight:
+  - text: The current longest commerical flight is from Singapore to Newark.
+
+  utter_faq/airlines:
+  - text: There are currently over 5000 airlines.
+
 rules:
   - rule: Say goodbye anytime the user says goodbye
     steps:
@@ -58,10 +62,15 @@ rules:
     - intent: bot_challenge
     - action: utter_iamabot
 
-  - rule: respond to FAQs
+  - rule: respond to question about airlines
     steps:
-      - intent: faq
-      - action: utter_faq
+      - intent: faq/airlines
+      - action: utter_faq/airlines
+
+  - rule: respond to question about longest flight
+    steps:
+      - intent: faq/longest_flight
+      - action: utter_faq/longest_flight
 
 session_config:
   session_expiration_time: 60
