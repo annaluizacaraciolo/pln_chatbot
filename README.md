@@ -24,7 +24,7 @@ Para a tarefa de classificação de intenções, realizamos uma análise compara
 - Transformer (BERT)
 </br>
 
-Também foi implementado um extrator de entidades para reconhecimento de entidades da sentenças sobre o conjunto de treinamento.
+Também foram implementados extratores de entidades para reconhecimento de entidades da sentenças baseados em transformer (BERT) e LSTM.
 
 ### Avaliação
 A base de dados sob estudo foi previamente dividida em subconjuntos de treinamento e de teste, de forma que ambas amostras nunca se misturam durante os processos de treino e teste. A avaliação da performance dos modelos sob o subcojunto de teste mede a acurácia e o F1-score dos modelos treinados anteriormente.
@@ -39,4 +39,4 @@ Lee, Harrison, Raghav, Gupta, Abhinav, Rastogi, Yuan, Cao, Bin, Zhang, Yonghui, 
 
 [3] [Rasa nlu in depth](https://rasa.com/blog/rasa-nlu-in-depth-part-1-intent-classification/)
 
-
+[4] [Rasa FAQs](https://rasa.com/docs/rasa/chitchat-faqs/)

@@ -5,22 +5,24 @@ stories:
 - story: search one way tickets
   steps: 
   - intent: SearchOnewayFlight
-  - action: utter_searchonewayflight
+  - action: utter_SearchOnewayFlight
 
 - story: search round trip tickets
   steps:
   - intent: SearchRoundtripFlights
-  - action: utter_searchroundtripflights
+  - action: utter_SearchRoundtripFlights/ask_arrival_place
+  - intent: SearchRoundtripFlights
+  - action: utter_SearchRoundtripFlights/ask_dates
 
 - story: reserve one way tickets
   steps:
   - intent: ReserveOnewayFlight
-  - action: utter_reserveonewayflight
+  - action: utter_ReserveOnewayFlight
 
 - story: reserve round trip tickets
   steps:
   - intent: ReserveRoundtripFlights
-  - action: utter_reserveroundtripflight
+  - action: utter_ReserveRoundtripFlights
 
 - story: happy path
   steps:

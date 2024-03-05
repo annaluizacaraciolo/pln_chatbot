@@ -1062,3 +1062,12 @@ nlu:
       - No, that is all right.
       - No, thanks for your help though.
       - Thats it. Thanks.
+
+  - intent: faq/longest_flight
+    examples: |
+      - What is the longest commercial flight today?
+
+  - intent: faq/airlines
+    examples: |
+      - How many airlines are there?
+
