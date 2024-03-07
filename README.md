@@ -7,7 +7,7 @@ Este projeto consiste do desenvolvimento de um chatbot para busca e marcação d
 2. Projeto de chatbot no rasa encontra-se no diretório `rasa_chatbot`
 3. [Apresentação no Canva](https://www.canva.com/design/DAF98MwZZo0/kUGd-pG7Y_yv0a0KCV2mjQ/edit?utm_content=DAF98MwZZo0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 4. Apresentação no formato PDF encontra-se no arquivo `PassagensChatbot.pdf`
-5. [Apresentação em vídeo]()
+5. [Apresentação em vídeo](https://youtu.be/Be1hPwJtQvA)
 
 ## Dados
 Os dados utilizados para treinamento do chatbot encontram-se disponíveis no [dstc8 schema guided dialogue](https://github.com/google-research-datasets/dstc8-schema-guided-dialogue). Foi selecionado um subconjunto deste conjunto de dados para refletir apenas o domínio de viagem.
